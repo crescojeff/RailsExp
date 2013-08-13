@@ -1,0 +1,16 @@
+<h1>Rubicorn -- where the boss starts red!!!</h1>
+
+<%= form_for @arena, url: {action: "create"}, html: {class: "arena_form"} do |f| %>
+    <%= f.label_tag "Attacks:" %>
+
+    <%= f.radio_button_tag(:attack,"ice",true) %>
+    <%= f.label_tag(:attack_ice, "Icy Rays!") %>
+    <%= f.radio_button_tag(:attack,"fire",false) %>
+    <%= f.label_tag(:attack_fire, "Fireball!") %>
+
+    <%= f.label_tag(:battle_log_title, "Archives of the Arena:") %>
+    <%= f.text_area_tag(:battle_log,"") %>
+    <%= f.image_tag("rubicorn.png") %>
+
+
+<% end %>
