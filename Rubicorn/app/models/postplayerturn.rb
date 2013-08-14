@@ -5,7 +5,5 @@
 
 class Postplayerturn < ActiveRecord::Base
 
-  @title = "boobs";
-  @text = "are awesome";
 
 end

@@ -1,9 +1,15 @@
 Rubicorn::Application.routes.draw do
 
-  resources :postplayerturn
+  #resources :postplayerturn
+  resources :posts
 
-  get "sylvannightmare/rubicorn_fight"
+  #get "sylvannightmare/rubicorn_fight"
   #root to: "sylvannightmare#rubicorn_fight"
-  root to: "postplayerturn#create"
+
+  #root to: "welcome#index"
+
+  #
+  #
+  root to: "posts#index"
 
 end

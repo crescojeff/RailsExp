@@ -4,9 +4,11 @@
 #character cases matching Upper_first+{all_lower}+"Controller"
 class PostplayerturnController  < ApplicationController
 
+
+
   def create
     #render text: params[:postplayerturn].inspect
-    @post = Postplayerturn.new(post_params)
+    @post = Postplayerturn.new(params[:post].permit(:title, :text))#post_params)
 
     @post.save
     redirect_to @post
@@ -33,7 +35,7 @@ class PostplayerturnController  < ApplicationController
 
   private
   def post_params
-    params.require(:postplayerturn).permit(:title, :text)
+    params.require(:post).permit(:title, :text)
   end
 
 end
